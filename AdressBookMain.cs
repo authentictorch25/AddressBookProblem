@@ -78,7 +78,18 @@ namespace AddressBookProgram
                 }
             }
         }
-        
+        public void deleteContact(string firstName, string lastName)
+        {
+            for (int i = 0; i < contactlist.Count; i++)
+            {
+                if (firstName == contactlist[i].firstName && lastName == contactlist[i].lastName)
+                {
+                    contactlist.RemoveAt(i);
+                    Console.WriteLine("\nContact {0} {1} deleted successfully", firstName, lastName);
+                }
+            }
+        }
+
 
     }
 }
